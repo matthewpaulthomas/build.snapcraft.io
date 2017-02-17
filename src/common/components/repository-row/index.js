@@ -14,7 +14,13 @@ const RepositoryRow = (props) => {
     <Row>
       <Data col="30"><Link to={ `/${fullName}/builds` }>{ fullName }</Link></Data>
       <Data col="20"> </Data>
-      <Data col="20"> </Data>
+        {/*
+          TODO: Technically this only checks snapcraft.yml for a
+          snap name, it doesn't check if snap is actually
+          registered at that name. Double check requirements for
+          this.
+        */}
+      <Data col="20">{ renderSnapName(snap.snap_info.name) }</Data>
       <Data col="30">
         {/*
           TODO: show 'Loading' when waiting for status?
@@ -32,6 +38,14 @@ const RepositoryRow = (props) => {
     </Row>
   );
 };
+
+const renderSnapName = (snapName) => {
+  if (!snapName) {
+    return (<a>Not registered</a>);
+  }
+
+  return (<div>{ snapName }</div>);
+}
 
 RepositoryRow.propTypes = {
   snap: PropTypes.shape({
