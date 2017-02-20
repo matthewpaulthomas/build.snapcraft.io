@@ -126,7 +126,7 @@ class SelectRepositoryList extends Component {
         <div className={ styles.footer }>
           <div className={ styles.right }>
             <Button disabled={ submitButtonDisabled } onClick={ this.onSubmit.bind(this) } appearance={ 'positive' }>
-              Enable repos
+              Add
             </Button>
           </div>
         </div>
