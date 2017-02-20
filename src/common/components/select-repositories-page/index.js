@@ -18,9 +18,6 @@ class SelectRepositoriesPage extends Component {
   render() {
     return (
       <div>
-        <HeadingTwo>
-          All your repositories have been successfully added to build.snapcraft.io
-        </HeadingTwo>
         <CardHighlighted>
           <HeadingThree>
             Select your repositories
