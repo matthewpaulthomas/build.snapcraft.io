@@ -101,8 +101,9 @@ export const getSnapName = (repositoryUrl, token) => {
         .then((snapcraftYaml) => {
           const snapName = snapcraftYaml.name;
           if (snapName) {
-            getMemcached().set(cacheId, snapName, 3600);
-            return resolve(snapName);
+            return getMemcached().set(cacheId, snapName, 3600, () => {
+              return resolve(snapName);
+            });
           } else {
             return resolve(null);
           }
