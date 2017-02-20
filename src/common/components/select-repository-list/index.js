@@ -124,13 +124,6 @@ class SelectRepositoryList extends Component {
         }
         { this.renderPageLinks.call(this) }
         <div className={ styles.footer }>
-          { !this.props.authStore.authenticated &&
-            <div className={ styles.left }>
-              <HeadingThree>
-                In order to enable your repositories, you need to sign in to your Ubuntu One account.
-              </HeadingThree>
-            </div>
-          }
           <div className={ styles.right }>
             <Button disabled={ submitButtonDisabled } onClick={ this.onSubmit.bind(this) } appearance={ 'positive' }>
               Enable repos
