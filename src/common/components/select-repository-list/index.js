@@ -14,7 +14,6 @@ import SelectRepositoryRow from '../select-repository-row';
 import Spinner from '../spinner';
 import PageLinks from '../page-links';
 import Button from '../vanilla/button';
-import { HeadingThree } from '../vanilla/heading';
 import { fetchUserRepositories } from '../../actions/repositories';
 import { hasRepository } from '../../helpers/repositories';
 import styles from './styles.css';

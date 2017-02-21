@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchUserRepositories } from '../../actions/repositories';
 import SelectRepositoryList from '../select-repository-list';
-import { HeadingTwo, HeadingThree } from '../vanilla/heading';
+import { HeadingThree } from '../vanilla/heading';
 import { CardHighlighted } from '../vanilla/card';
 
 class SelectRepositoriesPage extends Component {
